@@ -15,8 +15,10 @@
         e.preventDefault();
         responseContainer.innerHTML = '';
         searchedForText = searchField.value;
-        req('GET',`https://api.unsplash.com/search/photos/`,`query=${searchedForText}`, unsplashClientID)
-        
+        $.ajax({
+            url: `https://api.unsplash.com/search/photos/?query=${searchedForText}&${unsplashAKey}`,
+        }).done(addImage);
+        //req('GET',`https://api.unsplash.com/search/photos/`,`query=${searchedForText}`, unsplashClientID)
     });
 
 
