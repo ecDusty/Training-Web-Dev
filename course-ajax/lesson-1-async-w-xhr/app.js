@@ -16,14 +16,17 @@
         responseContainer.innerHTML = '';
         searchedForText = searchField.value;
         $.ajax({
-            url: `https://api.unsplash.com/search/photos/?query=${searchedForText}&${unsplashAKey}`,
+            url: `https://api.unsplash.com/search/photos/?query=${searchedForText}`,
+            headers: {
+                'Authorization':`Client-ID ${unsplashClientID}`
+            }
         }).done(addImage);
         //req('GET',`https://api.unsplash.com/search/photos/`,`query=${searchedForText}`, unsplashClientID)
     });
 
 
-    function addImage() {
-        const images = this.results;
+    function addImage(data) {
+        const images = data.results;
         let htmlContent = `<div><h3>There were no images found</h3></div>`
 
         if (images[0]) {
