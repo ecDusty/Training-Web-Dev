@@ -23,13 +23,12 @@
 
 
     function addImage() {
-        const data = JSON.parse(this.response);
-        const firstImage = data.results[0];
+        const images = this.results;
         let htmlContent = `<div><h3>There were no images found</h3></div>`
 
-        if (firstImage) {
+        if (images[0]) {
             htmlContent = ``;
-            for (const image of data.results) {
+            for (const image of images) {
                 const img = `<figure>
                     <img src="${image.urls.regular}" alt="${searchedForText}">
                     <figcaption>${searchedForText} by ${image.user.name}</figcaption>
