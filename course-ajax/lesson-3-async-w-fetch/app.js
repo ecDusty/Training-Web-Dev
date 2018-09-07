@@ -53,7 +53,7 @@
 
         //UnSplash integration
         fetch(unsplashURL+searchedForText,{
-            headers: { 'Authorization':`Client ID ${uSplashAPI}`}
+            headers: { 'Authorization': `Client-ID ${uSplashAPI}`}
         }).then(response => response.json())
         .then(addImage).catch(errorDisplay);
 

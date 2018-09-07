@@ -76,6 +76,7 @@ figure {
     width:calc(50% - 2em);
     position: relative;
     text-align: center;
+    align-self: flex-end;
 }
 
 figure img {
