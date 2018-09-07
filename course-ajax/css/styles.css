@@ -66,12 +66,14 @@ body {
 /*** Response Container ***/
 #response-container {
     margin-top: 2em;
+    display: flex;
+    flex-wrap:wrap;
 }
 
 /*** Image Styline ***/
 figure {
-    margin: 0;
-    margin-bottom: 2em;
+    margin: 0 1em 2em;
+    width:calc(50% - 2em);
     position: relative;
     text-align: center;
 }
