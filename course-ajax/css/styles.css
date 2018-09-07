@@ -95,9 +95,16 @@ figcaption {
 }
 
 /*** Article Styling ***/
-ul {
+ul.articles {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul.articles::before {
+    content: url('../lesson-1-async-w-xhr/poweredby_nytimes.png');
+    margin-right: calc(100% - 150px);
 }
 
 .article {
@@ -107,8 +114,9 @@ ul {
     background-size: 1.8em;
     border: solid 1px #dbe2e8;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-    margin-bottom: 0.5em;
+    margin: 0.5em;
     padding: 1em 2em 1em 4.8em;
+    width:calc(50% - 1em);
 }
 
 .article:hover {
