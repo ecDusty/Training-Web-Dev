@@ -20,5 +20,7 @@ class Vector(object):
     def __eq__(self, v):
         return self.coordinates == v.coordinates
 
-test_vector = [1,2,3]
+    def __mag__(self)
+
+test_vector = Vector([1,2,3])
 print test_vector
